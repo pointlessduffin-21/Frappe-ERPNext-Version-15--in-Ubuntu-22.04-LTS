@@ -125,7 +125,7 @@ add this to the 50-server.cnf file
     
     [server]
     user = mysql
-    pid-file = /run/mysqld/mysqld.pid
+    # pid-file = /run/mysqld/mysqld.pid
     socket = /run/mysqld/mysqld.sock
     basedir = /usr
     datadir = /var/lib/mysql
@@ -177,6 +177,8 @@ Now press (Ctrl-X) to exit
     sudo -H pip3 install frappe-bench
     
     bench --version
+    npm install -g yarn
+    npm install -g npm@10.8.2
     
 ### STEP 13 initilise the frappe bench & install frappe latest version 
 
