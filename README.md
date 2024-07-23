@@ -188,13 +188,9 @@ Now press (Ctrl-X) to exit
     bench start
     
 ### STEP 14 create a site in frappe bench 
-    
-    bench new-site dcode.com
-    
-    bench --site dcode.com add-to-hosts
 
-Open url http://dcode.com:8000 to login 
-
+      https://frappeframework.com/docs/user/en/tutorial/create-an-app 
+      https://frappeframework.com/docs/user/en/tutorial/create-a-site
 
 ### STEP 15 install ERPNext latest version in bench & site
 
