@@ -196,12 +196,35 @@ Now press (Ctrl-X) to exit
       https://frappeframework.com/docs/user/en/tutorial/create-an-app 
       https://frappeframework.com/docs/user/en/tutorial/create-a-site
 
+      # TLDR
+      bench new-app <your-app-name>
+      ./env/bin/pip install -q -U -e ./apps/<your-app-name>
+      bench build --app <your-app-name>
+
       # From the guide:
       bench new-site <your-site>.com
       bench --site <your-site>.com add-to-hosts
       bench --site <your-site>.com migrate
+### STEP 15 setup production
 
-### STEP 15 install ERPNext latest version in bench & site (Optional)
+      sudo bench setup production dcode-frappe
+      bench restart
+
+### STEP 17 Create a new user
+
+      sudo adduser dcode-frappe
+      sudo usermod -aG sudo dcode-frappe
+      su - dcode-frappe
+### STEP 18 SSL certificate fot https
+
+      sudo apt install certbot python3-certbot-nginx
+      certbot -d {domain_name} --register-unsafely-without-email
+      
+### for auto renew the certificate
+
+      sudo certbot renew --dry-run
+
+### (OPTIONAL) install ERPNext latest version in bench & site [if you do this, recommended to bypass Step 15]
 
     
     bench get-app erpnext --branch version-15
