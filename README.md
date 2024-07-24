@@ -206,6 +206,7 @@ Now press (Ctrl-X) to exit
       bench new-site library.localhost
       bench use library.localhost
       bench --site library.localhost add-to-hosts
+      # Run bench start again and then go to "http://localhost:8000" and it should load the page!
 
 ### (GUIDES BELOW HAVENT BEEN TESTED/CONFIRMED WORKING YET)
 ### STEP 15 setup production
