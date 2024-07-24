@@ -192,19 +192,22 @@ Now press (Ctrl-X) to exit
     bench start
     
 ### STEP 14 create a site in frappe bench 
-
+      # Links
       https://frappeframework.com/docs/user/en/tutorial/create-an-app 
       https://frappeframework.com/docs/user/en/tutorial/create-a-site
 
-      # TLDR
-      bench new-app <your-app-name>
-      ./env/bin/pip install -q -U -e ./apps/<your-app-name>
-      bench build --app <your-app-name>
+      # TLDR (lets create library_management as an example cause it always work, idk why lmao)
+      bench new-app library_management
+      ./env/bin/pip install -q -U -e ./apps/library_management
+      bench build
+      bench start
 
-      # From the guide:
-      bench new-site <your-site>.com
-      bench --site <your-site>.com add-to-hosts
-      bench --site <your-site>.com migrate
+## STEP 15 on another terminal, create the site part 2
+      bench new-site library.localhost
+      bench use library.localhost
+      bench --site library.localhost add-to-hosts
+
+### (GUIDES BELOW HAVENT BEEN TESTED/CONFIRMED WORKING YET)
 ### STEP 15 setup production
 
       sudo bench setup production dcode-frappe
