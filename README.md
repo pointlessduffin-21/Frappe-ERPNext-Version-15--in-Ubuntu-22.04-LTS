@@ -134,15 +134,19 @@ add this to the 50-server.cnf file
     bind-address = 127.0.0.1
     query_cache_size = 16M
     log_error = /var/log/mysql/error.log
+
     
     [mysqld]
+    # Uncomment character-set-server and collation-server under MySQL/MariaDB default is Latin1 before proceeding!
+    # Put these at the very bottom under InnoDB
     innodb-file-format=barracuda
     innodb-file-per-table=1
     innodb-large-prefix=1
     character-set-client-handshake = FALSE
     character-set-server = utf8mb4
     collation-server = utf8mb4_unicode_ci      
-     
+
+      # Put this under [mariadb-10.6] which is at the very bottom of the page.
     [mysql]
     default-character-set = utf8mb4
 
