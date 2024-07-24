@@ -196,7 +196,12 @@ Now press (Ctrl-X) to exit
       https://frappeframework.com/docs/user/en/tutorial/create-an-app 
       https://frappeframework.com/docs/user/en/tutorial/create-a-site
 
-### STEP 15 install ERPNext latest version in bench & site
+      # From the guide:
+      bench new-site <your-site>.com
+      bench --site <your-site>.com add-to-hosts
+      bench --site <your-site>.com migrate
+
+### STEP 15 install ERPNext latest version in bench & site (Optional)
 
     
     bench get-app erpnext --branch version-15
